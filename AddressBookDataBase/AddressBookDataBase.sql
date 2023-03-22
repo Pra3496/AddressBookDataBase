@@ -39,3 +39,5 @@ UPDATE AddressBook_DB SET State = 'Washinton' WHERE FirstName = 'Pranav'
 UPDATE AddressBook_DB SET Zip = 159753 WHERE FirstName = 'Pranav'
 UPDATE AddressBook_DB SET PhoneNumber = 9994447775 WHERE FirstName = 'Thor'
 UPDATE AddressBook_DB SET Email = 'RogersS@Starkins.com' WHERE FirstName = 'Steve'
+
+UPDATE AddressBook_DB SET Email = 'RogersS@Starkinss.com' WHERE FirstName = 'Steve'

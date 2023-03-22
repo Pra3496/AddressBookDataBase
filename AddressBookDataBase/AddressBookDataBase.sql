@@ -52,3 +52,8 @@ SELECT * FROM AddressBook_DB WHERE State = 'Nine relem'
 -- UC7 Retrive By City or State
 SELECT COUNT (*) FROM AddressBook_DB GROUP BY City 
 SELECT COUNT (*) FROM AddressBook_DB GROUP BY State
+
+
+--UC8 Sort Alphabetically entries by person Name for given City
+
+SELECT * FROM AddressBook_DB WHERE City = 'New York' Order By FirstName 

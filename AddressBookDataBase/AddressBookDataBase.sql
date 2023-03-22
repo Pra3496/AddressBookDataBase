@@ -32,7 +32,7 @@ VALUES
 
 --UC3 Update Data
 
-UPDATE AddressBook_DB SET LastName = 'Waghmares' WHERE FirstName = 'Pranav'
+UPDATE AddressBook_DB SET LastName = 'Waghmatres' WHERE FirstName = 'Pranav'
 UPDATE AddressBook_DB SET Address = 'Pune' WHERE FirstName = 'Pranav'
 UPDATE AddressBook_DB SET City = 'nanded' WHERE FirstName = 'Pranav'
 UPDATE AddressBook_DB SET State = 'Washinton' WHERE FirstName = 'Pranav'

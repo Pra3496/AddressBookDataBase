@@ -50,8 +50,5 @@ SELECT * FROM AddressBook_DB WHERE City = 'New York'
 SELECT * FROM AddressBook_DB WHERE State = 'Nine relem'
 
 -- UC7 Retrive By City or State
-SELECT COUNT (PersonId), City FROM AddressBook_DB  GROUP BY  City
-SELECT COUNT (PersonId), State FROM AddressBook_DB  GROUP BY  State
-
-SELECT COUNT (*) FROM AddressBook_DB WHERE City = 'New York'
-SELECT COUNT (*) FROM AddressBook_DB WHERE State = 'Nine relem' 
+SELECT COUNT (*) FROM AddressBook_DB GROUP BY City 
+SELECT COUNT (*) FROM AddressBook_DB GROUP BY State

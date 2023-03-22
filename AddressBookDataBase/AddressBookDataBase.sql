@@ -57,3 +57,18 @@ SELECT COUNT (*) FROM AddressBook_DB GROUP BY State
 --UC8 Sort Alphabetically entries by person Name for given City
 
 SELECT * FROM AddressBook_DB WHERE City = 'New York' Order By FirstName 
+
+
+ALTER TABLE AddressBook_DB ADD Name VARCHAR(30),Type VARCHAR(30);
+
+UPDATE AddressBook_DB SET Name = 'Pranav',Type = 'Family' WHERE FirstName = 'Pranav'
+
+UPDATE AddressBook_DB SET Name = 'Tony',Type = 'Family' WHERE FirstName = 'Tony'
+
+UPDATE AddressBook_DB SET Name = 'Steve',Type = 'Friend' WHERE FirstName = 'Steve'
+
+UPDATE AddressBook_DB SET Name = 'Thor',Type = 'Profession' WHERE FirstName = 'Thor'
+
+SELECT * FROM AddressBook_DB WHERE Type = 'Profession'
+
+SELECT * FROM AddressBook_DB WHERE Type = 'Family'

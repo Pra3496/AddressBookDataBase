@@ -41,3 +41,7 @@ UPDATE AddressBook_DB SET PhoneNumber = 9994447775 WHERE FirstName = 'Thor'
 UPDATE AddressBook_DB SET Email = 'RogersS@Starkins.com' WHERE FirstName = 'Steve'
 
 UPDATE AddressBook_DB SET Email = 'RogersS@Starkinss.com' WHERE FirstName = 'Steve'
+
+-- UC5 Delete contact
+DELETE FROM AddressBook_DB WHERE FirstName = 'Pranav'
+

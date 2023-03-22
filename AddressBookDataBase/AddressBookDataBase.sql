@@ -45,3 +45,6 @@ UPDATE AddressBook_DB SET Email = 'RogersS@Starkinss.com' WHERE FirstName = 'Ste
 -- UC5 Delete contact
 DELETE FROM AddressBook_DB WHERE FirstName = 'Pranav'
 
+-- UC6 Retrive By City or State
+SELECT * FROM AddressBook_DB WHERE City = 'New York'
+SELECT * FROM AddressBook_DB WHERE State = 'Nine relem'

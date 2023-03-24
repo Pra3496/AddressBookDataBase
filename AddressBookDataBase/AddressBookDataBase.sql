@@ -1,6 +1,6 @@
 -- sql is structural query language it stand 
 -- Sql is standerd language for storing and retriving data from database 
---
+
 -- UC1 Creating Database
 
 CREATE DATABASE AddressBook_Service
@@ -50,14 +50,16 @@ SELECT * FROM AddressBook_DB WHERE City = 'New York'
 SELECT * FROM AddressBook_DB WHERE State = 'Nine relem'
 
 -- UC7 Retrive By City or State
-SELECT COUNT (*) FROM AddressBook_DB GROUP BY City 
-SELECT COUNT (*) FROM AddressBook_DB GROUP BY State
+SELECT COUNT (*) AS CityCount,City FROM AddressBook_DB GROUP BY City 
+SELECT COUNT (*) AS StateCount, State FROM AddressBook_DB GROUP BY State
 
 
 --UC8 Sort Alphabetically entries by person Name for given City
 
 SELECT * FROM AddressBook_DB WHERE City = 'New York' Order By FirstName 
 
+
+--UC9 Ability to identify each address book with Name and type
 
 ALTER TABLE AddressBook_DB ADD Name VARCHAR(30),Type VARCHAR(30);
 
@@ -72,3 +74,17 @@ UPDATE AddressBook_DB SET Name = 'Thor',Type = 'Profession' WHERE FirstName = 'T
 SELECT * FROM AddressBook_DB WHERE Type = 'Profession'
 
 SELECT * FROM AddressBook_DB WHERE Type = 'Family'
+
+--UC10 Ability to get number of contact persons
+
+SELECT COUNT (Type) AS CountPerson, Type FROM AddressBook_DB GROUP BY Type
+
+--UC11 Ability to ADD person to friend and family
+
+INSERT INTO AddressBook_DB(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email,Name,Type)
+VALUES
+('Prakash','Thakre','sawangi','Nagpur','Maharastra',442651,963285587,'shreet@gmail.com','prakash','friend'),
+('Aditya','Waghmare','wardha','Nagpur','Maharastra',487911,7895462002,'adity546@gmail.com','aadi','family')
+
+
+

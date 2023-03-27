@@ -1,6 +1,6 @@
 -- sql is structural query language it stand 
 -- Sql is standerd language for storing and retriving data from database 
-
+--
 -- UC1 Creating Database
 
 CREATE DATABASE AddressBook_Service
@@ -20,7 +20,7 @@ Email VARCHAR(50) NOT NULL
 );
 
 SELECT * FROM AddressBook_DB
-DROP TABLE AddressBook_DB
+--DROP TABLE AddressBook_DB
 
 -- UC3 Inserting new Contact 
 INSERT INTO AddressBook_DB(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email)
@@ -86,5 +86,40 @@ VALUES
 ('Prakash','Thakre','sawangi','Nagpur','Maharastra',442651,963285587,'shreet@gmail.com','prakash','friend'),
 ('Aditya','Waghmare','wardha','Nagpur','Maharastra',487911,7895462002,'adity546@gmail.com','aadi','family')
 
+UC-13 join
+
+CREATE TABLE AddressBook_DB_service
+(
+PersonId INT PRIMARY KEY,
+FirstName VARCHAR(30) NOT NULL,
+LastName VARCHAR(30) NOT NULL,
+Address VARCHAR(100) NOT NULL,
+
+);
 
 
+CREATE TABLE Addressbook_Join(
+Addressbook_id INT PRIMARY KEY IDENTITY(1,1),
+PersonId INT,
+FOREIGN KEY (PersonId) REFERENCES AddressBook_DB(PersonId)
+);
+
+
+
+DROP TABLE Addressbook_Join
+
+INSERT INTO Addressbook_Join (PersonId)
+VALUES (3),
+(4),
+(5)
+
+
+SELECT * FROM Addressbook_Join
+SELECT * FROM AddressBook_DB
+
+select AddressBook_DB.PersonId,AddressBook_DB.Name,AddressBook_join.Addressbook_id FROM AddressBook_DB INNER JOIN Addressbook_Join ON 
+Addressbook_DB.PersonId = Addressbook_Join.PersonId
+
+
+select AddressBook_DB.PersonId,AddressBook_DB.Name,AddressBook_join.Addressbook_id FROM AddressBook_DB LEFT  JOIN Addressbook_Join ON 
+Addressbook_DB.PersonId = Addressbook_Join.PersonId
